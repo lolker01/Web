@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя улюблена піца</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Моя улюблена піца</h1>
+        <nav>
+            <a href="#about">Про піцу</a> |
+            <a href="#ingredients">Інгредієнти</a> |
+            <a href="#order">Замовити</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <div class="left">
+                    <!-- Зображення піци -->
+                    <img src="Pizza.jpg" alt="Моя улюблена піца">
+                </div>
+                <div class="right">
+                    <h2>Про мою улюблену піцу</h2>
+                    <p>Ця піца - справжній шедевр! Її поєднання свіжих інгредієнтів і смачної соусної основи робить її неперевершеною.</p>
+                    <p>Це класична неаполітанська піца, яка родом з Італії. <a href="https://uk.wikipedia.org/wiki/Піца" target="_blank">Дізнатися більше про піцу</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ingredients">
+            <h2>Інгредієнти</h2>
+            <ul>
+                <li>Тісто з оливковою олією</li>
+                <li>Томатний соус</li>
+                <li>Моцарела</li>
+                <li>Свіжі помідори</li>
+                <li>Базилік</li>
+                <li>Оливки</li>
+            </ul>
+        </section>
+
+        <section id="order">
+            <h2>Оберіть розмір піци</h2>
+            <label>
+                <input type="radio" name="size" value="30"> 30 см
+            </label>
+            <label>
+                <input type="radio" name="size" value="45"> 45 см
+            </label>
+
+            <!-- Кнопка замовлення -->
+            <button type="button" onclick="placeOrder()">Замовити зараз</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Моя піца. Всі права захищені.</p>
+        <p>
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Контакти</a>
+        </p>
+    </footer>
+
+    <script>
+        function placeOrder() {
+            // Отримуємо вибраний розмір піци
+            const size = document.querySelector('input[name="size"]:checked');
+
+            if (size) {
+                // Якщо розмір вибрано
+                alert(`Замовлення на піцу розміром ${size.value} см успішно оформлено!`);
+            } else {
+                // Якщо розмір не вибрано
+                alert('Будь ласка, виберіть розмір піци!');
+            }
+        }
+    </script>
+</body>
+</html>
